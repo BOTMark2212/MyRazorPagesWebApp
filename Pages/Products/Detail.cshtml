@@ -1,0 +1,18 @@
+@page "{productid}"
+@model MyRazorPagesWebApp.Pages.Products.DetailModel
+@{
+}
+<div>
+    Page: Products/Details
+    @if(Model.Product is null)
+    {
+        <div>Khong ton tai product theo yeu cua</div>
+    }
+    else
+    {
+        <div>
+            ProductId: @Model.Product.ProductId
+        </div>
+    }
+
+</div>

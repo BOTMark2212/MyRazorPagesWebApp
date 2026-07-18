@@ -1,0 +1,33 @@
+﻿@page
+@model DemoRazorPagesWebApp.Pages.Products.IndexModel
+
+<div>
+    <h2>Products (@Model.Products.Count)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ProductId</th>
+                <th>ProductName</th>
+                <th>Category</th>
+                <th>UnitPrice</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model.Products)
+            {
+                <tr>
+                    <td>@p.ProductId</td>
+                    <td>@p.ProductName</td>
+                    <td>@(p.Category?.CategoryName ?? "No info")</td>
+                    <td>@p.UnitPrice</td>
+                    <td>
+                        <a asp-page="./Detail" asp-route-productid="@p.ProductId">Detail</a>
+                        <a asp-page="./Edit" asp-route-productid="@p.ProductId">Edit</a>
+                        <a asp-page="./Delete" asp-route-productid="@p.ProductId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
