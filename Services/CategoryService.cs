@@ -1,4 +1,6 @@
-﻿namespace MyRazorPagesWebApp.Services
+﻿using MyRazorPagesWebApp.Models;
+using Microsoft.EntityFrameworkCore;
+namespace MyRazorPagesWebApp.Services
 {
     public class CategoryService : ICategoryService
     {

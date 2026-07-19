@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj": {}
+    "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj": {
+    "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
         "projectName": "MyRazorPagesWebApp",
-        "projectPath": "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
+        "projectPath": "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
         "packagesPath": "C:\\Users\\nc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\obj\\",
+        "outputPath": "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -64,6 +64,12 @@
               "version": "[10.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[10.0.10, )"
             },

@@ -1,0 +1,88 @@
+@page "{employeeid}"
+@model MyRazorPagesWebApp.Pages.Employees.EditModel
+@{
+}
+
+@if (Model.Message != String.Empty)
+{
+    <div>
+        @Model.Message
+    </div>
+}
+@if (Model.Employee != null)
+{
+    <div>
+        <h2>Edit Employee</h2>
+        <form method="post">
+            @Html.AntiForgeryToken()
+            <div>EmployeeId: @Model.Employee.EmployeeId</div>
+            <div>
+                <label>FirstName:</label>
+                <input type="text" name="FirstName" value="@Model.Employee.FirstName" required />
+            </div>
+            <div>
+                <label>LastName:</label>
+                <input type="text" name="LastName" value="@Model.Employee.LastName" required />
+            </div>
+            <div>
+                <label>Title:</label>
+                <input type="text" name="Title" value="@Model.Employee.Title" />
+            </div>
+            <div>
+                <label>TitleOfCourtesy:</label>
+                <input type="text" name="TitleOfCourtesy" value="@Model.Employee.TitleOfCourtesy" />
+            </div>
+            <div>
+                <label>BirthDate:</label>
+                <input type="date" name="BirthDate" value="@Model.Employee.BirthDate?.ToString("yyyy-MM-dd")" />
+            </div>
+            <div>
+                <label>HireDate:</label>
+                <input type="date" name="HireDate" value="@Model.Employee.HireDate?.ToString("yyyy-MM-dd")" />
+            </div>
+            <div>
+                <label>Address:</label>
+                <input type="text" name="Address" value="@Model.Employee.Address" />
+            </div>
+            <div>
+                <label>City:</label>
+                <input type="text" name="City" value="@Model.Employee.City" />
+            </div>
+            <div>
+                <label>Region:</label>
+                <input type="text" name="Region" value="@Model.Employee.Region" />
+            </div>
+            <div>
+                <label>PostalCode:</label>
+                <input type="text" name="PostalCode" value="@Model.Employee.PostalCode" />
+            </div>
+            <div>
+                <label>Country:</label>
+                <input type="text" name="Country" value="@Model.Employee.Country" />
+            </div>
+            <div>
+                <label>HomePhone:</label>
+                <input type="text" name="HomePhone" value="@Model.Employee.HomePhone" />
+            </div>
+            <div>
+                <label>Extension:</label>
+                <input type="text" name="Extension" value="@Model.Employee.Extension" />
+            </div>
+            <div>
+                <label>Notes:</label>
+                <textarea name="Notes">@Model.Employee.Notes</textarea>
+            </div>
+            <div>
+                <label>ReportsTo:</label>
+                <input type="number" name="ReportsTo" value="@Model.Employee.ReportsTo" />
+            </div>
+            <div>
+                <input type="submit" value="Save" />
+            </div>
+        </form>
+    </div>
+}
+else
+{
+    <div>Employee not found</div>
+}

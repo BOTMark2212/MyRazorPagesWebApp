@@ -1,4 +1,6 @@
-﻿namespace MyRazorPagesWebApp.Services
+﻿using MyRazorPagesWebApp.Models;
+
+namespace MyRazorPagesWebApp.Services
 {
     public interface ICategoryService
     {

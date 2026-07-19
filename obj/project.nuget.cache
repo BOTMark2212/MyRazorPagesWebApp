@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SQq4efg83zM=",
+  "dgSpecHash": "nQyFq19vFqE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
+  "projectFilePath": "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nc\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\nc\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
@@ -24,6 +24,7 @@
     "C:\\Users\\nc\\.nuget\\packages\\microsoft.entityframeworkcore.design\\10.0.10\\microsoft.entityframeworkcore.design.10.0.10.nupkg.sha512",
     "C:\\Users\\nc\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\10.0.10\\microsoft.entityframeworkcore.relational.10.0.10.nupkg.sha512",
     "C:\\Users\\nc\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\10.0.10\\microsoft.entityframeworkcore.sqlserver.10.0.10.nupkg.sha512",
+    "C:\\Users\\nc\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.10\\microsoft.entityframeworkcore.tools.10.0.10.nupkg.sha512",
     "C:\\Users\\nc\\.nuget\\packages\\microsoft.extensions.configuration.json\\10.0.10\\microsoft.extensions.configuration.json.10.0.10.nupkg.sha512",
     "C:\\Users\\nc\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.10\\microsoft.extensions.dependencymodel.10.0.10.nupkg.sha512",
     "C:\\Users\\nc\\.nuget\\packages\\microsoft.identity.client\\4.73.1\\microsoft.identity.client.4.73.1.nupkg.sha512",
@@ -57,9 +58,9 @@
       "code": "NU1510",
       "level": "Warning",
       "message": "PackageReference Microsoft.Extensions.Configuration.Json will not be pruned. This package is automatically available and does not need to be referenced explicitly. Remove the PackageReference item.",
-      "projectPath": "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
+      "projectPath": "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
+      "filePath": "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
       "libraryId": "Microsoft.Extensions.Configuration.Json",
       "targetGraphs": [
         "net10.0"

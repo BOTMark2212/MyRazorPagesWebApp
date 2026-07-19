@@ -1,0 +1,39 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using MyRazorPagesWebApp.Models;
+using MyRazorPagesWebApp.Services;
+
+namespace MyRazorPagesWebApp.Pages.Products
+{
+    public class CreateModel : PageModel
+    {
+        IProductService _productService;
+        ICategoryService _categoryService;
+
+        [BindProperty]
+        public Product? Product { get; set; }
+        public List<Category> Categories { get; set; } = new();
+        public string Message { set; get; } = string.Empty;
+
+        public CreateModel(IProductService productService, ICategoryService categoryService)
+        {
+            _productService = productService;
+            _categoryService = categoryService;
+        }
+
+        public async Task OnGet()
+        {
+            Categories = await _categoryService.GetCategoriesAsync();
+        }
+
+        public async Task<IActionResult> OnPost()
+        {
+            if (Product != null)
+            {
+                await _productService.CreateProductAsync(Product);
+                return RedirectToPage("./Index");
+            }
+            return Page();
+        }
+    }
+}

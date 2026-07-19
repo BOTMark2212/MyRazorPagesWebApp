@@ -1,0 +1,40 @@
+﻿@page
+@model MyRazorPagesWebApp.Pages.Employees.IndexModel
+@{
+}
+
+<div>
+    <h2>Employees (@Model.Employees.Count)</h2>
+    <a asp-page="./Create">Create New Employee</a>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>EmployeeId</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Title</th>
+                <th>City</th>
+                <th>HireDate</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model.Employees)
+            {
+                <tr>
+                    <td>@e.EmployeeId</td>
+                    <td>@e.FirstName</td>
+                    <td>@e.LastName</td>
+                    <td>@e.Title</td>
+                    <td>@e.City</td>
+                    <td>@e.HireDate?.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        <a asp-page="./Detail" asp-route-employeeid="@e.EmployeeId">Detail</a>
+                        <a asp-page="./Edit" asp-route-employeeid="@e.EmployeeId">Edit</a>
+                        <a asp-page="./Delete" asp-route-employeeid="@e.EmployeeId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

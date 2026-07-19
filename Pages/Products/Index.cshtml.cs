@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MyRazorPagesWebApp.Models;
 using MyRazorPagesWebApp.Services;
 
 namespace MyRazorPagesWebApp.Pages.Products
@@ -12,9 +13,9 @@ namespace MyRazorPagesWebApp.Pages.Products
         {
             _productService = productService;
         }
-        public void OnGet()
+        public async Task OnGet()
         {
-            Products = _productService.GetProducts(null);
+            Products = await _productService.GetProductsAsync(null);
         }
     }
 }

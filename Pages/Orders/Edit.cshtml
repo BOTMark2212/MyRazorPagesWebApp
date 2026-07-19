@@ -1,0 +1,76 @@
+@page "{orderid}"
+@model MyRazorPagesWebApp.Pages.Orders.EditModel
+@{
+}
+
+@if (Model.Message != String.Empty)
+{
+    <div>
+        @Model.Message
+    </div>
+}
+@if (Model.Order != null)
+{
+    <div>
+        <h2>Edit Order</h2>
+        <form method="post">
+            @Html.AntiForgeryToken()
+            <div>OrderId: @Model.Order.OrderId</div>
+            <div>
+                <label>CustomerId:</label>
+                <input type="text" name="CustomerId" value="@Model.Order.CustomerId" />
+            </div>
+            <div>
+                <label>EmployeeId:</label>
+                <input type="number" name="EmployeeId" value="@Model.Order.EmployeeId" />
+            </div>
+            <div>
+                <label>OrderDate:</label>
+                <input type="date" name="OrderDate" value="@Model.Order.OrderDate?.ToString("yyyy-MM-dd")" />
+            </div>
+            <div>
+                <label>RequiredDate:</label>
+                <input type="date" name="RequiredDate" value="@Model.Order.RequiredDate?.ToString("yyyy-MM-dd")" />
+            </div>
+            <div>
+                <label>ShippedDate:</label>
+                <input type="date" name="ShippedDate" value="@Model.Order.ShippedDate?.ToString("yyyy-MM-dd")" />
+            </div>
+            <div>
+                <label>ShipName:</label>
+                <input type="text" name="ShipName" value="@Model.Order.ShipName" />
+            </div>
+            <div>
+                <label>ShipAddress:</label>
+                <input type="text" name="ShipAddress" value="@Model.Order.ShipAddress" />
+            </div>
+            <div>
+                <label>ShipCity:</label>
+                <input type="text" name="ShipCity" value="@Model.Order.ShipCity" />
+            </div>
+            <div>
+                <label>ShipRegion:</label>
+                <input type="text" name="ShipRegion" value="@Model.Order.ShipRegion" />
+            </div>
+            <div>
+                <label>ShipPostalCode:</label>
+                <input type="text" name="ShipPostalCode" value="@Model.Order.ShipPostalCode" />
+            </div>
+            <div>
+                <label>ShipCountry:</label>
+                <input type="text" name="ShipCountry" value="@Model.Order.ShipCountry" />
+            </div>
+            <div>
+                <label>Freight:</label>
+                <input type="number" step="0.01" name="Freight" value="@Model.Order.Freight" />
+            </div>
+            <div>
+                <input type="submit" value="Save" />
+            </div>
+        </form>
+    </div>
+}
+else
+{
+    <div>Order not found</div>
+}

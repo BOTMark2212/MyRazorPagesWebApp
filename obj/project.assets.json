@@ -594,6 +594,18 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/10.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "10.0.10"
+        },
+        "compile": {
+          "lib/net10.0/_._": {}
+        },
+        "runtime": {
+          "lib/net10.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.Configuration.Json/10.0.10": {
         "type": "package",
         "compile": {
@@ -2413,6 +2425,34 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Tools/10.0.10": {
+      "sha512": "oFNTteHcfnftdV9a+4Psed+HV95YKnNrPF8F2+nHtvdOVDfdcbNqKE7xYutOquo1cuBAs84Lq5Boh49ANnF4zQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/10.0.10",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "docs/PACKAGE.md",
+        "lib/net10.0/_._",
+        "lib/net8.0/_._",
+        "lib/net9.0/_._",
+        "microsoft.entityframeworkcore.tools.10.0.10.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net472/any/ef.exe",
+        "tools/net472/win-arm64/ef.exe",
+        "tools/net472/win-x86/ef.exe",
+        "tools/net8.0/any/ef.dll",
+        "tools/net8.0/any/ef.runtimeconfig.json"
+      ]
+    },
     "Microsoft.Extensions.Configuration.Json/10.0.10": {
       "sha512": "uvJ6sHwjgrkMEJOgiC76G0mcZGXerwyyWkwX34EOjCbxKG6TCtfAoqDKAMsCvEBf9HxjlGQEgqsSMOGCmGBf+A==",
       "type": "package",
@@ -3094,6 +3134,7 @@
       "Microsoft.EntityFrameworkCore >= 10.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.10",
+      "Microsoft.EntityFrameworkCore.Tools >= 10.0.10",
       "Microsoft.Extensions.Configuration.Json >= 10.0.10"
     ]
   },
@@ -3104,11 +3145,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
       "projectName": "MyRazorPagesWebApp",
-      "projectPath": "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
+      "projectPath": "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\MyRazorPagesWebApp.csproj",
       "packagesPath": "C:\\Users\\nc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nc\\source\\repos\\MyRazorPagesWebApp\\obj\\",
+      "outputPath": "C:\\Users\\nc\\Documents\\GitHub\\MyRazorPagesWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3161,6 +3202,12 @@
             "version": "[10.0.10, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[10.0.10, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[10.0.10, )"
           },

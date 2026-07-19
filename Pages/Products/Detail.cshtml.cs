@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MyRazorPagesWebApp.Models;
+using MyRazorPagesWebApp.Services;
 
 namespace MyRazorPagesWebApp.Pages.Products;
 
@@ -11,9 +13,9 @@ public class DetailModel : PageModel
 
     public string Command;
 
-    public void OnGet([FromServices] IProductService _productService)
+    public async Task OnGet([FromServices] IProductService _productService)
     {
-        Product = _productService.GetProduct(ProductId);
+        Product = await _productService.GetProductAsync(ProductId);
     }
 
     public void OnGetDetail()

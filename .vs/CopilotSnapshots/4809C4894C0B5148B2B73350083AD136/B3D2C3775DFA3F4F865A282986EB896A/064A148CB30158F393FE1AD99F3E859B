@@ -1,0 +1,4 @@
+﻿@page
+@model MyRazorPagesWebApp.Pages.Products.CreateModel
+@{
+}

@@ -1,4 +1,7 @@
-﻿namespace MyRazorPagesWebApp.Services
+﻿using Microsoft.EntityFrameworkCore;
+using MyRazorPagesWebApp.Models;
+
+namespace MyRazorPagesWebApp.Services
 {
     public class ProductService : IProductService
     {

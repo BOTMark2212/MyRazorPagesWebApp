@@ -1,0 +1,21 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using MyRazorPagesWebApp.Models;
+using MyRazorPagesWebApp.Services;
+
+namespace MyRazorPagesWebApp.Pages.Orders
+{
+    public class IndexModel : PageModel
+    {
+        public List<Order> Orders { get; set; }
+        IOrderService _orderService;
+        public IndexModel(IOrderService orderService)
+        {
+            _orderService = orderService;
+        }
+        public async Task OnGet()
+        {
+            Orders = await _orderService.GetOrdersAsync();
+        }
+    }
+}

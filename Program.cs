@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using MyRazorPagesWebApp.Models;
+using MyRazorPagesWebApp.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,6 +13,8 @@ builder.Services.AddDbContext<NorthwindContext>(options =>
 // Đăng ký service theo interface; dùng Scoped cho DbContext liên quan đến request
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 // Thêm logging (mặc định đã có), có thể cấu hình thêm nếu cần
 var app = builder.Build();

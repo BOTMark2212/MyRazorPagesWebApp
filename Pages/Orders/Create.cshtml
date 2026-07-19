@@ -1,0 +1,54 @@
+@page
+@model MyRazorPagesWebApp.Pages.Orders.CreateModel
+@{
+}
+
+<div>
+    <h2>Create Order</h2>
+    @if (Model.Message != String.Empty)
+    {
+        <div>
+            @Model.Message
+        </div>
+    }
+    <div>
+        <form method="post">
+            @Html.AntiForgeryToken()
+            <div>
+                <label>CustomerId:</label>
+                <input type="text" name="CustomerId" />
+            </div>
+            <div>
+                <label>EmployeeId:</label>
+                <input type="number" name="EmployeeId" />
+            </div>
+            <div>
+                <label>OrderDate:</label>
+                <input type="date" name="OrderDate" />
+            </div>
+            <div>
+                <label>RequiredDate:</label>
+                <input type="date" name="RequiredDate" />
+            </div>
+            <div>
+                <label>ShipName:</label>
+                <input type="text" name="ShipName" />
+            </div>
+            <div>
+                <label>ShipAddress:</label>
+                <input type="text" name="ShipAddress" />
+            </div>
+            <div>
+                <label>ShipCity:</label>
+                <input type="text" name="ShipCity" />
+            </div>
+            <div>
+                <label>Freight:</label>
+                <input type="number" step="0.01" name="Freight" />
+            </div>
+            <div>
+                <input type="submit" value="Create" />
+            </div>
+        </form>
+    </div>
+</div>

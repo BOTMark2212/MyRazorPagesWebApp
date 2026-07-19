@@ -17,16 +17,16 @@ namespace MyRazorPagesWebApp.Pages.Products
             _productService = productService;
         }
 
-        public void OnGet(int ProductId) //hien thi form + du lieu hien tai
+        public async Task OnGet(int ProductId) //hien thi form + du lieu hien tai
         {
-            Product = _productService.GetProduct(ProductId);
+            Product = await _productService.GetProductAsync(ProductId);
         }
 
-        public void OnPost() //cap nhat thong tin product
+        public async Task OnPost() //cap nhat thong tin product
         {
             if (Product != null)
             {
-                _productService.UpdateProduct(Product);
+                await _productService.UpdateProductAsync(Product);
                 Message = "Cap nhat thanh cong";
             }
         }
